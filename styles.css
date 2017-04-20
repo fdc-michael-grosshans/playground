@@ -826,8 +826,8 @@ g.train circle {
 
  g.test circle {
   stroke-width: 1;
-  stroke: black;
-  stroke-opacity: 0.6;
+  stroke: white;
+  stroke-opacity: 0.8;
   fill-opacity: 0.9;
 }
 
