@@ -144,15 +144,18 @@ limitations under the License.
   <div id="main-part" class="l--page">
 
     <!--  Data Column-->
-    <div class="column data">
+    <div class="column data" >
       <h4>
         <span>Data</span>
       </h4>
-      <div class="ui-dataset">
+      <div class="ui-dataset" style="visibility: hidden; height: 0px">
         <p>Which dataset do you want to use?</p>
         <div class="dataset-list">
           <div class="dataset" title="Circle">
             <canvas class="data-thumbnail" data-dataset="circle"></canvas>
+          </div>
+          <div class="dataset" title="Own Dataset">
+            <canvas class="data-thumbnail" data-dataset="own"></canvas>
           </div>
           <div class="dataset" title="Exclusive or">
             <canvas class="data-thumbnail" data-dataset="xor"></canvas>
@@ -178,13 +181,13 @@ limitations under the License.
             <input class="mdl-slider mdl-js-slider" type="range" id="percTrainData" min="10" max="90" step="10">
           </p>
         </div>
-        <div class="ui-noise">
+        <div class="ui-noise" style="visibility: hidden;">
           <label for="noise">Noise:&nbsp;&nbsp;<span class="value">XX</span></label>
           <p class="slider">
             <input class="mdl-slider mdl-js-slider" type="range" id="noise" min="0" max="50" step="5">
           </p>
         </div>
-        <div class="ui-batchSize">
+        <div class="ui-batchSize" style="visibility: hidden;">
           <label for="batchSize">Batch size:&nbsp;&nbsp;<span class="value">XX</span></label>
           <p class="slider">
             <input class="mdl-slider mdl-js-slider" type="range" id="batchSize" min="1" max="30" step="1">
@@ -320,19 +323,19 @@ limitations under the License.
   <!-- Article -->
 
   <article id="article-text">
-    <div class="l--body">
+    <div class="l--body" style="visibility:hidden">
       <h2>Um, What Is a Neural Network?</h2>
       <p>It’s a technique for building a computer program that learns from data. It is based very loosely on how we think the human brain works. First, a collection of software “neurons” are created and connected together, allowing them to send messages to each other. Next, the network is asked to solve a problem, which it attempts to do over and over, each time strengthening the connections that lead to success and diminishing those that lead to failure. For a more detailed introduction to neural networks, Michael Nielsen’s <a href="http://neuralnetworksanddeeplearning.com/index.html">Neural Networks and Deep Learning</a> is a good place to start. For a more technical overview, try <a href="http://www.deeplearningbook.org/">Deep Learning</a> by Ian Goodfellow, Yoshua Bengio, and Aaron Courville.</p>
     </div>
 
-    <div class="l--body">
+    <div class="l--body" style="visibility:hidden">
       <h2>This Is Cool, Can I Repurpose It?</h2>
       <p>Please do! We’ve open sourced it on <a href="https://github.com/tensorflow/playground">GitHub</a> with the hope that it can make neural networks a little more accessible and easier to learn. You’re free to use it in any way that follows our <a href="https://github.com/tensorflow/playground/blob/master/LICENSE">Apache License</a>. And if you have any suggestions for additions or changes, please <a href="https://github.com/tensorflow/playground/issues">let us know</a>.</p>
       <p>We’ve also provided some controls below to enable you tailor the playground to a specific topic or lesson. Just choose which features you’d like to be visible below then save <a class="hide-controls-link" href="#">this link</a>, or <a href="javascript:location.reload();">refresh</a> the page.</p>
       <div class="hide-controls"></div>
     </div>
 
-    <div class="l--body">
+    <div class="l--body" style="visibility:hidden">
       <h2>What Do All the Colors Mean?</h2>
       <p>Orange and blue are used throughout the visualization in slightly different ways, but in general orange shows negative values while blue shows positive values.</p>
       <p>The data points (represented by small circles) are initially colored orange or blue, which correspond to positive one and negative one.</p>
@@ -340,7 +343,7 @@ limitations under the License.
       <p>In the output layer, the dots are colored orange or blue depending on their original values. The background color shows what the network is predicting for a particular area. The intensity of the color shows how confident that prediction is.</p>
     </div>
 
-    <div class="l--body">
+    <div class="l--body" style="visibility:hidden">
       <h2>What Library Are You Using?</h2>
       <p>We wrote a tiny neural network <a href="https://github.com/tensorflow/playground/blob/master/src/nn.ts">library</a>
       that meets the demands of this educational visualization. For real-world applications, consider the
@@ -348,7 +351,7 @@ limitations under the License.
       </p>
     </div>
 
-    <div class="l--body">
+    <div class="l--body" style="visibility:hidden">
       <h2>Credits</h2>
       <p>
         This was created by Daniel Smilkov and Shan Carter.

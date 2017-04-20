@@ -40,6 +40,7 @@ export let datasets: {[key: string]: dataset.DataGenerator} = {
   "xor": dataset.classifyXORData,
   "gauss": dataset.classifyTwoGaussData,
   "spiral": dataset.classifySpiralData,
+  "own": dataset.ownGenerator,
 };
 
 /** A map between dataset names and functions that generate regression data. */
@@ -160,7 +161,7 @@ export class State {
   sinX = false;
   cosY = false;
   sinY = false;
-  dataset: dataset.DataGenerator = dataset.classifyCircleData;
+  dataset: dataset.DataGenerator = dataset.ownGenerator;
   regDataset: dataset.DataGenerator = dataset.regressPlane;
   seed: string;
 
